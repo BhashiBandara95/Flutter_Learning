@@ -15,7 +15,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: AppBar(
         // place appbar
-        title: const Text('Home View'), // title of the appbar
+        title: Text('Home View'), // title of the appbar
         centerTitle: true, // center title
         backgroundColor: Colors.deepPurpleAccent, // color of the appbar
       ),
@@ -25,17 +25,10 @@ class _HomeViewState extends State<HomeView> {
           setState(() {}); // Update UI with updated values
         },
         backgroundColor: Colors.deepPurpleAccent,
-        child: const Icon(Icons.add),
+        child: Icon(Icons.add),
       ),
-      body: Center(
-        child: Container(
-          // color: Colors.green.shade400,
-          width: 100,
-          height: 100,
-          decoration: BoxDecoration(
-              color: Colors.deepPurpleAccent,
-              borderRadius: BorderRadius.circular(25)),
-        ),
+      body: Container(
+        child: Center(child: Text(number.toString())), // Wrap with center
       ),
     );
   }
