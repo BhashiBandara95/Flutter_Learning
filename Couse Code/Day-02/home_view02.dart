@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nature_app/my_component.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -15,7 +16,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: AppBar(
         // place appbar
-        title: Text('Home View'), // title of the appbar
+        title: const Text('Home View'), // title of the appbar
         centerTitle: true, // center title
         backgroundColor: Colors.deepPurpleAccent, // color of the appbar
       ),
@@ -25,10 +26,10 @@ class _HomeViewState extends State<HomeView> {
           setState(() {}); // Update UI with updated values
         },
         backgroundColor: Colors.deepPurpleAccent,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
-      body: Container(
-        child: Center(child: Text(number.toString())), // Wrap with center
+      body: Center(
+        child: MyComponent(), // import my_component widget
       ),
     );
   }
