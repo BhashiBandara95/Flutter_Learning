@@ -28,14 +28,12 @@ class _HomeViewState extends State<HomeView> {
         backgroundColor: Colors.deepPurpleAccent,
         child: const Icon(Icons.add),
       ),
-      body: Center(
-        child: Container(
-          width: 100,
-          height: 100,
-          decoration: BoxDecoration(
-              color: Colors.deepPurpleAccent,
-              borderRadius: BorderRadius.circular(25)),
-        ),
+      body: const Center(
+        child: Row(
+          // Create row widget
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly, // main axis
+          children: [MyComponent(), MyComponent()],
+        ), // import my_component widget
       ),
     );
   }

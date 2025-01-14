@@ -29,12 +29,16 @@ class _HomeViewState extends State<HomeView> {
         child: const Icon(Icons.add),
       ),
       body: Center(
-        child: Container(
-          width: 100,
-          height: 100,
-          decoration: BoxDecoration(
-              color: Colors.deepPurpleAccent,
-              borderRadius: BorderRadius.circular(25)),
+        child: Stack(
+          // arrange as stack
+          alignment: Alignment.center, // stack alignment
+          children: [
+            MyComponent(),
+            CircleAvatar(
+              radius: 30,
+              backgroundColor: Colors.green,
+            )
+          ],
         ),
       ),
     );
